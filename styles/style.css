@@ -1,0 +1,413 @@
+/*Importando arquivos estilos */
+@import "./dark-mode.css";
+@import "./config.css";
+
+/*===============HEADER================*/
+
+header{
+  background-color: var(--bg-panel);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;  
+}
+
+.header article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 0;    
+}
+
+article .logo .logo-home{
+    font-size: 4.0rem;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.menu-links{
+  cursor: pointer;
+}
+
+.menu-links div{
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-text);
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.flash.active{
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade{
+
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
+
+}
+
+.menu-links.active .line1{
+  transform: rotate(-45deg) translate(-8px, 8px)
+  
+}
+
+.menu-links.active .line2{
+  opacity: 0;
+  
+}
+
+.menu-links.active .line3{
+  transform: rotate(45deg) translate(-5px, -7px)    
+}
+
+.flash{
+  position: absolute;
+  top: 0;
+  right: 0; 
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-panel);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.flash .sociais-header ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  gap: 40px;
+}
+
+.flash .sociais-header ul li{
+  transition: transform 0.5s;
+}
+
+
+.flash .sociais-header ul li a{
+  font-size: 4.0rem;
+  color: var(--color-headings);
+}
+
+.menu-links{
+  z-index: 99;
+}
+
+.navbar .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bg);
+}
+
+.navbar .menu li{
+    transition: all 0.3s;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbar .menu li:hover{
+  transition: all 0.3s;
+  background-color: var(--color-headings);
+  color: #fff;
+}
+
+.navbar .menu li a{
+    font-weight: 600;
+    display: inline-block;
+    color: var(--color-text);
+    font-size: 1.9rem;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar .menu li a:hover{
+  color: var(--branco);
+}
+
+
+/*===============HOME================*/
+
+.home-main{
+    background-image: url(../imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: color;
+    background-attachment: fixed;
+    padding: 250px 0;
+    width: 100%;
+}
+
+
+.home .conteudo .principal{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.home .principal h2{
+    font-size: 4.5rem;
+    margin: 25px 0;
+    color: #3664FF;
+}
+
+.home .principal h1{
+    font-size: 3.5rem;
+    color: #C4C1B3;
+}
+
+
+#maquina::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+  
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -15px, 0);
+    }
+    30% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+}
+
+/*===============SOBRE================*/
+
+.sobre-main{
+    padding: 120px 0;
+}
+
+.sobre-mim {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.profile-pic{
+  border-radius: 50%;
+  margin: 0 auto 2rem auto;
+}
+
+.descricao{
+    width: 70%;
+    text-align: center;
+}
+
+.descricao .btn-cv{
+  border: 1px solid var(--color-headings);
+  background-color: var(--color-headings);
+  padding: 10px 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.descricao .btn-cv:hover{
+  background-color: #0f7fff;
+  transition: all 0.3s;
+}
+
+.descricao .btn-cv a{
+  color: var(--branco);
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.descricao .sociais ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.descricao .sociais ul li{
+  transition: transform 0.5s;
+}
+
+.descricao .sociais ul li:hover{
+  transform: translate(0px, -7px);
+  transition: transform 0.5s;
+}
+
+.descricao .sociais ul li a{
+  font-size: 4.0rem;
+  color: var(--color-headings);
+}
+
+
+
+
+/*===============PROJETOS================*/
+
+
+.projetos-main{
+  padding: 120px 0;
+}
+
+.habilidades{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 3rem;
+  row-gap: 4rem;
+}
+
+.habilidades .habilidade{
+  padding: 40px 20px;
+  background-color: var(--bg);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  
+}
+
+.habilidades .habilidade:hover{
+  transform: translate(0px, -9px);
+  transition: transform 0.5s;
+}
+
+.conhecimento{
+  text-align: center;
+}
+
+.conhecimento span i{
+  font-size: 6.0rem;
+}
+
+.conhecimento h3{
+  font-size: 3.0rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+
+.conhecimento span i{
+  font-size: 2.8rem;
+  color: var(--color-headings);
+}
+
+
+/*===============PROJETOS================*/
+
+.github-main{
+  padding: 120px 0;
+  background-color: var(--bg);
+}
+
+.repositorios{
+  text-align: center;
+}
+
+.repositorios .btn-github{
+  border: 1px solid var(--color-headings);
+  background-color: var(--color-headings);
+  padding: 10px 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.repositorios .btn-github:hover{
+  background-color: #0f7fff;
+  transition: all 0.3s;
+}
+
+.repositorios .btn-github a{
+  color: var(--branco);
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/*===============TECNOLOGIAS================*/
+
+.tecnologias-main {
+  padding: 120px 0;
+  background-color: var(--amarelo);
+}
+
+.tecnologias .linguagens ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 3rem;
+  row-gap: 4rem;
+}
+
+
+.linguagens ul li{
+  font-size: 2.0rem;
+  color: var(--color-text);
+  margin: 20px 0;
+  background-color: var(--bg);
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.5s;
+} 
+
+.linguagens ul li:hover{
+  transform: scale(1.3);
+  transition: transform 0.5s;
+}
+
+/*===============FOOTER================*/
+
+.frase{
+  padding: 50px 0;
+}
+
+.frase h3{
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+}
+
+.frase h3 .destaque{
+  text-transform: uppercase;
+}
+
+.dev{
+  padding: 10px 0;
+}
