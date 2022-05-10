@@ -17,7 +17,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
-    padding: 10px 0;    
+    padding: 10px 0;   
 }
 
 article .logo .logo-home{
@@ -123,25 +123,21 @@ article .logo .logo-home{
     cursor: pointer;
 }
 
-.navbar .menu li:hover{
-  transition: all 0.3s;
+.navbar .menu li.action a{
   background-color: var(--color-headings);
-  color: #fff;
+  color: var(--branco);
+  border-radius: 3px;
+
 }
 
 .navbar .menu li a{
     font-weight: 600;
     display: inline-block;
     color: var(--color-text);
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     padding: 10px 0;
     width: 100%;
 }
-
-.navbar .menu li a:hover{
-  color: var(--branco);
-}
-
 
 /*===============HOME================*/
 
@@ -364,7 +360,7 @@ article .logo .logo-home{
 
 .tecnologias-main {
   padding: 120px 0;
-  background-color: var(--amarelo);
+  background-color: var(--color-headings);
 }
 
 .tecnologias .linguagens ul {

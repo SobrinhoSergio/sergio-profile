@@ -8,26 +8,25 @@
         position: static;
     }
 
+    .header article{
+        flex-direction: column;   
+        /* Deixar um espaçamento vertical*/
+        justify-content: space-between;    
+        height: 20vh; 
+    }
+
     article .logo .logo-home{
         font-size: 3.0rem;
     }
 
+    
+    .menu-links{
+        display: none;
+    }
+    
+
     .navbar .menu{
         flex-direction: column;
-    }
-
-    .navbar .menu li:hover{
-        transition: none;
-        background-color: transparent;
-    }
-
-    .navbar .menu li a:hover{
-        color: var(--color-text);
-    }
-
-
-    .navbar .menu li+li{
-        border-top: 0.001px solid var(--bg-panel);
     }
 
     .title{
